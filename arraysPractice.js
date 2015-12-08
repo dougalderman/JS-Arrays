@@ -285,11 +285,23 @@ sure that it's equal to 4. */
 
   //Code Here
 
+  devMountainEmployees.push(tyler);
+  devMountainEmployees.push(cahlan);
+  devMountainEmployees.push(ryan);
+  devMountainEmployees.push(colt);
+
+  console.log(devMountainEmployees.length);
+
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
-
+for (var i = devMountainEmployees.length - 1; i >= 0; i--) {
+  var ob = devMountainEmployees[i];
+  if (ob.name === 'Cahlan') {
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
 
 
@@ -332,6 +344,8 @@ of Data is to have an Array full of objects. */
 
   //Code Here
 
+users = [];
+
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
 
@@ -344,6 +358,23 @@ var user1 = {
 };
 
 //Your Code Here
+var user2 = {
+    name: 'Dan Abrams',
+    email: 'dan2325@hotmail.com',
+    password: 'Via#Wanda%',
+    username: 'dabrams'
+};
+
+var user3 = {
+    name: 'Mary Smith',
+    email: 'mvs5232@yahoo.com',
+    password: 'Letsdo#L_unch',
+    username: 'mvsmith32'
+};
+
+users.push(user1);
+users.push(user2);
+users.push(user3);
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -354,5 +385,13 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
   //Code Here
+
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].email === 'tylermcginnis33@gmail.com') {
+      users.splice(i, 1);
+      break;
+    }
+  }
+
 
 //The activity we just did is very much how data works in 'the real world'.
